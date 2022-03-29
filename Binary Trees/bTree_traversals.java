@@ -1,5 +1,7 @@
+// All traversals of binary tree (level order, in Order, post Order, pre Order (both iterative and recursive))
+
 import java.util.*;
-public class bTreeInput 
+public class bTree_traversals  
 {
     static Node root;
     static class Node
@@ -13,12 +15,13 @@ public class bTreeInput
             left=right=null;
         }
     }
+
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
 
-        root = insert(str);          // insert
+        root = insert(str);          // insert elements in binary tree
         
         System.out.print("Level Order: ");
         levelOrder(root);
@@ -122,7 +125,7 @@ public class bTreeInput
         System.out.print(root.data+" ");
     }
 
-    public static void iterativePreOrder(Node root)
+    public static void iterativePreOrder(Node root)            // Preorder iterative
     {
         if(root==null) return;
         Stack<Node> st = new Stack<>();

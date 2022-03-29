@@ -12,6 +12,7 @@ public class bTree_Height
             left=right=null;
         }
     }
+    
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
@@ -61,7 +62,7 @@ public class bTree_Height
         int right_height = maxHeight(root.right);
         return 1+Math.max(left_height, right_height);
     }    
-    static int minHeight(Node root)
+    public static int minHeight(Node root)
     {
         if(root==null) return 0;
         int left_height = minHeight(root.left);
