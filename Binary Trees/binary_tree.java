@@ -1,3 +1,5 @@
+// Basic Implementation of a binary tree
+
 public class binary_tree
 {
     static Node root;
