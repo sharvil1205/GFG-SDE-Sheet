@@ -23,6 +23,7 @@ public class bTree_countLeaves{
         root = insert(str);
         System.out.println("Number of leaves using recursive solution: " + countLeavesRecursive(root, 0));
         System.out.println("Number of leaves using iterative solution: " + countLeavesIterative(root, 0));
+        sc.close();
     }
 
     int cnt=0;
