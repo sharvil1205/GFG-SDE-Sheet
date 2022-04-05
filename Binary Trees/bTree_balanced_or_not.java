@@ -49,9 +49,12 @@ public class bTree_balanced_or_not
     public static boolean isBalanced(Node root)
     {
         if(root==null) return true;
-        int lh = height(root.left);
-        int rh = height(root.right);
-        return Math.abs(lh-rh)<=1 && isBalanced(root.left) && isBalanced(root.right);
+	    int lh = height(root.left);
+	    int rh = height(root.right);
+	    if(Math.abs(lh-rh)>1) return false;
+	    boolean left = isBalanced(root.left);
+	    boolean right = isBalanced(root.right);
+	    return left && right;
     }
 
     public static int height(Node root)
