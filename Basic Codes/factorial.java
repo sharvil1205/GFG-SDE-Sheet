@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import javax.lang.model.util.ElementScanner14;
 public class factorial {
     static int fact(int n)
     {
