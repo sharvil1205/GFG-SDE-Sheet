@@ -13,10 +13,11 @@ public class dp_fibonacci
         System.out.println("Fibonacci series of term " + n  + " using Normal Recursion: " + recur(n));
         System.out.println("Fibonacci series of term " + n  + " using Memoization: " + memo(n, new int[n+1]));
         System.out.println("Fibonacci series of term " + n  + " using Tabulation: " + tabu(n));
+        System.out.println("Fibonacci series of term " + n  + " using Tabulation + Space Optimization: " + tabu_space(n));
         sc.close();
     }
 
-    static int iter(int n)                                       // Normal Iterative approach
+    static int iter(int n)                                       // Iteration
     {
         int n1 = 0;
         int n2 = 1;
@@ -29,20 +30,20 @@ public class dp_fibonacci
         return n2;
     }
 
-    static int recur(int n)                                      // Normal recursive apporach
+    static int recur(int n)                                      // recursion
     {
         if(n<=1) return n;
         return recur(n-1) + recur(n-2);
     }
 
-    static int memo(int n, int[] qb)                             // Dynamic Programming approach (Memoization)
+    static int memo(int n, int[] qb)                             // memoization
     {
         if(n<2) return n;
         if(qb[n]!=0) return qb[n];
         return qb[n]=memo(n-1,qb)+memo(n-2,qb);
     }
 
-    static int tabu(int n)                                      // Dynamic Programming Approach (Tabulation)
+    static int tabu(int n)                                      // tabulation
     {
         if(n<=1) return n;
         int[] dp = new int[n+1];
@@ -53,5 +54,20 @@ public class dp_fibonacci
             dp[i] = dp[i-1] + dp[i-2];
         }
         return dp[n];
+    }
+
+    static int tabu_space(int n)                                      // Tabulation + Space Optimization
+    {
+        if(n<=1) return n;
+        int secondLast = 0;
+        int last = 1;
+        int curr=0;
+        for(int i=2; i<=n; i++)
+        {
+            curr = secondLast + last;
+            secondLast = last;
+            last = curr;
+        }
+        return curr;
     }
 }
