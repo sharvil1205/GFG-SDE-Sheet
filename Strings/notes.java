@@ -20,7 +20,7 @@ public class notes
     
         System.out.println("equals('Shadsadsafad'): " + s.equals("Shadsadsafad"));      // returns true if strings are equal
 
-        System.out.println("indexOf('vil'): " + s.indexOf("vil"));                     // Search a string for the first occurrence of "vil":
+        System.out.println("indexOf('vil'): " + s.indexOf("vil"));                     // Search a string for the first occurence of "vil":
 
         System.out.println("isEmpty(): " + s.isEmpty());                              // Returns true if string is empty
 
