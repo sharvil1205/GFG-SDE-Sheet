@@ -16,7 +16,9 @@ public class unique_paths
             Output: 28   */
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of rows: ");
         int m = sc.nextInt();
+        System.out.println("Enter number of columns: ");
         int n = sc.nextInt();
         
         System.out.println("Total number of unique paths using recursion: " + recur(m-1, n-1));
