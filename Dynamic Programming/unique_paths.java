@@ -20,12 +20,37 @@ public class unique_paths
         int n = sc.nextInt();
         
         System.out.println("Total number of unique paths using recursion: " + recur(m-1, n-1));
+        System.out.println("Total number of unique paths using memoization: " + memo(m-1, n-1, new int[m][n]));
+        System.out.println("Total number of unique paths using tabulation: " + tabu(m, n));
     }
     
     public static int recur(int m, int n)
     {
-        if(m==0 && n==0) return 1;
-        if(m==0 || n==0) return 1;
-        return recur(m-1, n) + recur(n-1, m);
+        if(m==0 && n==0) return 1;                                            // base case
+        if(m==0 || n==0) return 1;                                            // if a row == 0 or col == 0 there is only one path from there. 
+        return recur(m-1, n) + recur(n-1, m);                                 // add the total paths
+    }
+
+    public static int memo(int m, int n, int[][] dp)
+    {
+        if(m==0 && n==0) return dp[m][n] = 1;
+        if(dp[m][n] != 0) return dp[m][n];
+        if(m == 0 || n == 0) return dp[m][n] = 1;
+        return dp[m][n] = memo(m-1, n, dp) + memo(m, n-1, dp);
+    }
+
+    public static int tabu(int m, int n)
+    {
+        int dp[][] = new int[m][n];
+        dp[0][0] = 1;
+        for(int i=0; i<m; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+                if(i==0 || j==0) dp[i][j] = 1;
+                else dp[i][j] = dp[i-1][j] + dp[i][j-1];
+            }
+        }
+        return dp[m-1][n-1];
     }
 }
