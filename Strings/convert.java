@@ -34,5 +34,10 @@ public class convert
         System.out.println(String.valueOf(3));
         System.out.println(String.valueOf('3'));
 
+
+        /* STRING TO CHAR ARRAY */
+        String s = "Sharvil";
+        char[] sch = s.toCharArray();
+
     }    
 }

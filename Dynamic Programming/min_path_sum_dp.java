@@ -55,17 +55,16 @@ public class min_path_sum_dp
 
     public static int tabu(int[][] grid, int row, int col)
     {
-        int[][] dp = new int[row][col];
         for(int i=0; i<row; i++)
         {
             for(int j=0; j<col; j++)
             {
-                if(i==0 && j==0) dp[i][j] = grid[i][j];
-                else if(i==0 && j!=0) dp[i][j] = grid[i][j] + grid[i][j-1];
-                else if(j==0 && i!=0) dp[i][j] = grid[i][j] + grid[i-1][j];
-                else dp[i][j] = grid[i][j] + Math.min(grid[i-1][j], grid[i][j-1]);
+                if(i==0 && j==0) grid[i][j] = grid[i][j];
+                else if(i==0 && j!=0) grid[i][j] = grid[i][j] + grid[i][j-1];
+                else if(j==0 && i!=0) grid[i][j] = grid[i][j] + grid[i-1][j];
+                else grid[i][j] = grid[i][j] + Math.min(grid[i-1][j], grid[i][j-1]);
             }
         }
-        return dp[row-1][col-1];
+        return grid[row-1][col-1];
     }
 }
