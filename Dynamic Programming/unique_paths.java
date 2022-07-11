@@ -19,7 +19,7 @@ public class unique_paths
         int m = sc.nextInt();
         int n = sc.nextInt();
         
-        System.out.println(recur(m-1, n-1));
+        System.out.println("Total number of unique paths using recursion: " + recur(m-1, n-1));
     }
     
     public static int recur(int m, int n)

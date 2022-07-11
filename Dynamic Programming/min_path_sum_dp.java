@@ -17,10 +17,14 @@ public class min_path_sum_dp
         Explanation: Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.
          */
 
+         System.out.println("Enter number of rows: ");
          int row = sc.nextInt();
+         System.out.println("Enter number of columns: ");
          int col = sc.nextInt();
-         int[][] grid = new int[row][col];
 
+         int[][] grid = new int[row][col];
+        
+         System.out.println("Enter numbers of " + row + " by " + col + " matrix: ");
          for(int i=0; i<row; i++)
          {
             for(int j=0; j<col; j++)
@@ -29,18 +33,18 @@ public class min_path_sum_dp
             }
          }
 
-         System.out.println(recur(grid, row-1, col-1));
-         System.out.println(memo(grid, row-1, col-1, new int[row][col]));
-         System.out.println(tabu(grid, row, col));
+         System.out.println("Minimum path sum using recursion: "  + recur(grid, row-1, col-1));
+         System.out.println("Minimum path sum using memoization: " + memo(grid, row-1, col-1, new int[row][col]));
+         System.out.println("Minimum path sum using tabulation: " + tabu(grid, row, col));
     }
 
-    public static int recur(int[][] grid, int row, int col)
+    public static int recur(int[][] grid, int row, int col)                                        
     {
-        if(row==0 && col==0) return grid[row][col];
-        if(row==0) return grid[row][col] + recur(grid, row, col-1);
-        if(col==0) return grid[row][col] + recur(grid, row-1, col);
+        if(row==0 && col==0) return grid[row][col];                                                 // base case
+        if(row==0) return grid[row][col] + recur(grid, row, col-1);                                 // row == 0 which means we have reached the last row and there is only one way from here(col-1)
+        if(col==0) return grid[row][col] + recur(grid, row-1, col);                                 // col == 0 which means we have reached the last col and there is only one way from here(row-1)
 
-        return grid[row][col] + Math.min(recur(grid, row-1, col), recur(grid, row, col-1));
+        return grid[row][col] + Math.min(recur(grid, row-1, col), recur(grid, row, col-1));         // return the path with minimum value
     }
 
     public static int memo(int[][] grid, int row, int col, int[][] dp)
