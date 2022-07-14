@@ -6,8 +6,8 @@ public class queues
 {
     public static void main(String[] args) 
     {
-        PriorityQueue<Integer> q = new PriorityQueue<Integer>();
-        q.add(4);
+        Queue<Integer> q = new LinkedList<Integer>();
+        q.add(4);                                                 // add(e): Add element in the queue
         q.add(1);
         q.add(10);
         q.add(2);
