@@ -1,28 +1,28 @@
+/* Constructors: A constructor in Java is a special method that is used to initialize objects. 
+   The constructor is called when an object of a class is created. It can be used to set initial values for object attributes:  */
+
 import java.util.*;
 
 public class OOP_constructors 
 {
-    int x;
+    int x;        // attribute
 
-    String name;
-    int age;
-    public OOP_constructors()   // Constructors
+    public OOP_constructors()      // Constructor
     {
-        x = 10;
+        x = 10;                    // Set initialize value for class attribute x
     }
 
-    public OOP_constructors(String myname, int myage)
+    public OOP_constructors(int y)       // There can be multiple constructors of same class, but the parameters should be different. If the parameters are same it gives constructor overloading error 
     {
-        name = myname;
-        age = myage;
+        x = y;
     }
 
     public static void main(String[] args) 
     {
-        OOP_constructors obj = new OOP_constructors();
+        OOP_constructors obj = new OOP_constructors();    // This will call constructor 
         System.out.println(obj.x);
-        
-        OOP_constructors boy = new OOP_constructors("Sharvil", 20);
-        System.out.println(boy.name + " " + boy.age);
+
+        OOP_constructors obj1 = new OOP_constructors(12);           
+        System.out.println(obj1.x);
     }
 }
