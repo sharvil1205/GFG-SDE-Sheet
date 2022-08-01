@@ -20,7 +20,8 @@ class OOP_inheritance                 // superclass(parent): the class being inh
 
 class Dog extends OOP_inheritance     // subclass(child): the class that inherits from other class
 {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Dog dog = new Dog();
         dog.bark();
     }
