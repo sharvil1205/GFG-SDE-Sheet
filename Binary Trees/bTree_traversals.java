@@ -47,7 +47,7 @@ public class bTree_traversals
         sc.close();
     } 
 
-    public static Node insert(String str)                    // Function to input binary string
+    public static Node insert(String str)                    // Function to input binary tree
     {
         if(str.length()==0 || str == "N") return null;
         String[] s = str.split(" ");
