@@ -19,10 +19,10 @@ public class OOP_constructors
 
     public static void main(String[] args) 
     {
-        OOP_constructors obj = new OOP_constructors();    // This will call constructor 
+        OOP_constructors obj = new OOP_constructors();    // This will call first constructor 
         System.out.println(obj.x);
 
-        OOP_constructors obj1 = new OOP_constructors(12);           
+        OOP_constructors obj1 = new OOP_constructors(12);       // This will call second constructor
         System.out.println(obj1.x);
     }
 }

@@ -22,9 +22,6 @@ public class binary_search
         int low = 0;
         int high = arr.length-1;
         int mid;
-
-        // Check if sorted array is ascending or descending
-        boolean isAscending = arr[low] < arr[high];
         
         while(low<=high)
         {
@@ -33,27 +30,13 @@ public class binary_search
             {
                 return mid;
             }
-            if(isAscending)
+            if(arr[mid]>element)
             {
-                if(arr[mid]>element)
-                {
-                    high = mid-1;
-                }
-                else
-                {
-                    low=mid+1;
-                }
+                high = mid-1;
             }
             else
             {
-                if(arr[mid]<element)
-                {
-                    high = mid-1;
-                }
-                else
-                {
-                    low=mid+1;
-                }
+                low=mid+1;
             }
         }
         return -1;
