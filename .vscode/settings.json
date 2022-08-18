@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "OOP",
         "Dynamic Programming",
-        "OOP"
+        "Basic Codes"
     ]
 }

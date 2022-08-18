@@ -14,13 +14,15 @@ public class arraylist
         list.add(3);
         list.add(4);
         list.add(5);
-
         System.out.println();
         System.out.println("list.add(): List after adding elements 0,1,2,3,4,4 : " + list);                                 // Print the whole list
         System.out.println();
 
-
-
+        list.add(4,4);
+        System.out.println("list.add(index,element): List after adding element 4 at index 4 : " + list);                                 // Print the whole list
+        System.out.println();
+        
+        
         list.set(0,99);                                                                                                     // set(oldValue, newValue): Update values of arrayList
         System.out.println("list.set(0,99): Elements in the list after updating value at position 0 to 99: " + list);
         System.out.println();
