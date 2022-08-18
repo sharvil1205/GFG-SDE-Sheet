@@ -1,7 +1,9 @@
 {
     "java.project.sourcePaths": [
+        "Searching Algorithms",
         "OOP",
         "Dynamic Programming",
-        "Basic Codes"
+        "Basic Codes",
+        "Sorting Algorithms"
     ]
 }
