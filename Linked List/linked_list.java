@@ -1,7 +1,5 @@
 import java.util.*;
 
-import javax.swing.plaf.synth.SynthSpinnerUI;
-
 public class linked_list
 {
     static Node head;                                                               // Defining head
@@ -46,6 +44,7 @@ public class linked_list
     {
         Node temp = head;
         System.out.print("Data in linked list: ");
+        int i=0;
         while(temp!=null)
         {
             System.out.print(temp.data + " ");                                      // Print data in the list

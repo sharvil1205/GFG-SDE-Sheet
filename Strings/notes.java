@@ -28,7 +28,7 @@ public class notes
 
         System.out.println("length(): " + s.length());                                    // Returns length of string
 
-        System.out.println("replace('a', 'b'): " + s.replace('a', 'b'));                  // Replaces the chars of string
+        System.out.println("replace('a', 'b'): " + s.replace('a', 'b'));                  // Replaces the chars/substrings of string
 
         String[] s1 = s.split("");                                                        // Splits a string into an array of substrings
 
