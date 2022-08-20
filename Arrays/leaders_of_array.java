@@ -16,6 +16,8 @@ public class leaders_of_array
             a[i] = sc.nextInt();            
         }
         System.out.println("Leaders of the array: " + leaders(a,n));
+
+        sc.close();
     }
     
     static ArrayList<Integer> leaders(int arr[], int n)
