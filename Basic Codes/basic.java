@@ -7,6 +7,8 @@ public class basic
         Scanner sc = new Scanner(System.in);
         
         System.out.println(2>1);
+
+        sc.close();
     }
     
 }

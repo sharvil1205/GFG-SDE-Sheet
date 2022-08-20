@@ -4,7 +4,6 @@
  Objects: Object is an instance of a class. Eg: banana, apple, mango etc
  */
 
-import java.util.*;
 public class OOP_classes_and_objects
 {
     int x = 10;                                                                                  // attribute

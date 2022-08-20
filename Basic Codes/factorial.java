@@ -29,5 +29,7 @@ public class factorial {
         {
             System.out.println("Factorial of " + n + " is " + fact(n));
         }
+
+        sc.close();
     }
 }

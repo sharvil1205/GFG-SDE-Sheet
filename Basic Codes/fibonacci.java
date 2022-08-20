@@ -29,5 +29,7 @@ public class fibonacci
         int n = sc.nextInt();
         System.out.println("Fibonnacci series till " + n + " terms = ");
         System.out.println(fibo(n));
+
+        sc.close();
     }   
 }

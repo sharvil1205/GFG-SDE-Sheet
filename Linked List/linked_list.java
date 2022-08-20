@@ -21,6 +21,7 @@ public class linked_list
         String str = sc.nextLine();                                                  // Take string as an input to linked list
         head = insert(str);                                                         // function insert to insert data in linked list
         printData(head);                                                            // Function to print data of linked list
+        
     }
 
     static Node insert(String str)
