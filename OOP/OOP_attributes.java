@@ -18,7 +18,7 @@ public class OOP_attributes
         OOP_attributes obj2 = new OOP_attributes();
         System.out.println(obj2.x);                                             // This will print 5 (original attribute)                                                             
         
-        obj2.y = 25;                                                            // This will give error because the attribute that we are trying to change has 'final' keyword. Hence the attribute cannot be changed.
+        // obj2.y = 25;                                                            // This will give error because the attribute that we are trying to change has 'final' keyword. Hence the attribute cannot be changed.
         System.out.println(obj2.y);
     }
 }
