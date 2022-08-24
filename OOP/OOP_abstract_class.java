@@ -5,10 +5,10 @@
    -> Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
    -> Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
  */
- 
+
 abstract class Animal                                 // Abstract class
 {
-    public abstract void animalSound();               // Abstract method (does not have a body)
+    public abstract void catSound();                  // Abstract method (does not have a body)
     
     public void sleep()                               // Regular method
     {
@@ -16,22 +16,22 @@ abstract class Animal                                 // Abstract class
     }
 }
   
-  class Pig extends Animal                            // Subclass (inherit from Animal)
+  class Cat extends Animal                            // Subclass (inherit from Animal)
   {
-    public void animalSound() 
+    public void catSound() 
     {  
-        System.out.println("The pig says: wee wee");   // The body of animalSound() is provided here
+        System.out.println("Meow");                  // The body of animalSound() is provided here
     }
   }
   
-  class Main 
+  public class OOP_abstract_class 
   {
     public static void main(String[] args) 
     {
-        // Animal myObj = new Animal();               Gives error
+        // Animal myObj = new Animal();               Gives error: Cannot instantiate Animal
 
-        Pig myPig = new Pig(); // Create a Pig object
-        myPig.animalSound();
-        myPig.sleep();
+        Cat obj = new Cat();                         // Create a Cat object
+        obj.catSound();
+        obj.sleep();
     }
   }
