@@ -8,9 +8,19 @@ subclass (child) - the class that inherits from another class
 superclass (parent) - the class being inherited from
 
 To inherit from a class, use the extends keyword.
-*/
 
-class OOP_inheritance                 // superclass(parent): the class being inherited from
+ 
+SINGLE INHERITANCE:
+   
+  class A
+    |
+    |
+    ↓ 
+  class B
+
+ */
+
+class Dog                                   // superclass(parent): the class being inherited from
 {
     public void bark()
     {
@@ -18,11 +28,11 @@ class OOP_inheritance                 // superclass(parent): the class being inh
     }    
 }
 
-class Dog extends OOP_inheritance     // subclass(child): the class that inherits from other class
+public class OOP_single_inheritance extends Dog     // subclass(child): the class that inherits from other class
 {
     public static void main(String[] args) 
     {
-        Dog dog = new Dog();
+        OOP_single_inheritance dog = new OOP_single_inheritance();
         dog.bark();
     }
 }
