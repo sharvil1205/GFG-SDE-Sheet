@@ -11,7 +11,7 @@
   2. Non-access Modifiers: Do not control access level, but provides other functionalites. Non-access modifiers:
        1. final: The class cannot be inherited by other classes. Attributes and methods cannot be overridden/modified
        2. static: Attributes and methods belongs to the class, rather than an object
-       3. abstract:
+       3. abstract: Abstract methods contains only delcaration, but not the implementation
        4. transient: Attributes and methods are skipped when serializing the object containing them
        5. synchronized: Methods can only be accessed by one thread at a time
        6. volatile: The value of an attribute is not cached thread-locally, and is always read from the "main memory"
