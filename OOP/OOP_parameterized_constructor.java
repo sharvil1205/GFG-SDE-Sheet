@@ -1,7 +1,7 @@
 /* 
     2. Parameterized Constructor: A constructor that has parameters is known as parameterized constructor. 
        If we want to initialize fields of the class with our own values, then use a parameterized constructor.
- */
+*/
 
 import java.util.*;
 

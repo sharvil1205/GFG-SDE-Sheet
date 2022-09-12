@@ -1,5 +1,5 @@
 /* Modifiers: Modifiers allows us to restrict the scope or visibility of a package, class, constructor, methods, variables, or other data members.
-  Modifiers are divided into two types:
+   Modifiers are divided into two types:
   
   1. Access Modifiers: Controls the access level. By using access specifiers, we define how the members (attributes and methods) of a 
       class can be accessed. Access modifiers:
