@@ -60,6 +60,10 @@ public class stack_using_array
             System.out.println("Popped element: " + lastElement);
         }
     }
+    public void size()
+    {
+        System.out.println("Current size of stack: " + size);
+    }
     public static void main(String args[]) 
     {
          stack_using_array st = new stack_using_array(4);
@@ -69,6 +73,7 @@ public class stack_using_array
          st.push(9);
          st.pop();
          st.pop();
+         st.size();
          st.pop();
          st.peek();
     }

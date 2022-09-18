@@ -57,12 +57,15 @@ public class stack_using_linked_list
     public static void main(String[] args) 
     {
         stack_using_linked_list st = new stack_using_linked_list();      
-        st.pop();
+        
         st.push(4);
         st.push(2);
         st.peek();
         st.push(7);
         st.size();
+        st.pop();
+        st.pop();
+        st.pop();
         st.pop();
     }
 }
