@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "Stacks",
         "Sorting Algorithms",
         "Searching Algorithms",
         "OOP",
@@ -11,6 +12,6 @@
         "Binary Search Tree",
         "Basic Codes",
         "Arrays",
-        "Stacks"
+        "Queues"
     ]
 }
