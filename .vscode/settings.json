@@ -3,6 +3,7 @@
         "Stacks",
         "Sorting Algorithms",
         "Searching Algorithms",
+        "Queues",
         "OOP",
         "Linked List",
         "HashMap",
@@ -12,6 +13,6 @@
         "Binary Search Tree",
         "Basic Codes",
         "Arrays",
-        "Queues"
+        "Strings"
     ]
 }
