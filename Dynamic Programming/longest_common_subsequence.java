@@ -29,12 +29,14 @@ Explanation: The longest common subsequence is "ace" and its length is 3. */
         System.out.println("Length of longest common subsequence using memoization: " + memo(s1, s2, 0, 0, new int[s1.length()][s2.length()]));
         System.out.println("Length of longest common subsequence using tabulation: " + tabu(s1, s2));
     }
+    
     static int recur(String s1, String s2, int i, int j)
     {
         if(i==s1.length() || j==s2.length()) return 0;
         if(s1.charAt(i) == s2.charAt(j)) return 1 + recur(s1, s2, i+1, j+1);
         return Math.max(recur(s1, s2, i+1, j), recur(s1, s2, i, j+1));
     }
+    
     static int memo(String s1, String s2, int i, int j, int[][] dp)
     {
         if(i==s1.length() || j==s2.length()) return 0;
@@ -42,6 +44,7 @@ Explanation: The longest common subsequence is "ace" and its length is 3. */
         if(s1.charAt(i) == s2.charAt(j)) return dp[i][j] = 1 + memo(s1, s2, i+1, j+1, dp);
         return dp[i][j] = Math.max(memo(s1,s2,i+1,j,dp), memo(s1, s2, i, j+1, dp));
     }    
+    
     static int tabu(String s1, String s2)
     {
         int[][] dp = new int[s1.length()+1][s2.length()+1];
