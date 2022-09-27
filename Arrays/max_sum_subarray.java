@@ -28,8 +28,8 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
         {
             a[i] = sc.nextInt();
         }
-       System.out.println("Maximum subarray sum using brute force: " + brute_force(a)); 
-       System.out.println("Maximum subarray sym using Kadane's algorithm: " + kadane(a));
+       System.out.println("Maximum subarray sum using brute force method: " + brute_force(a)); 
+       System.out.println("Maximum subarray sum using Kadane's algorithm: " + kadane(a));
     }    
 
     static int brute_force(int[] a)                 // Brute force algorithm with O(n*n) complexity
