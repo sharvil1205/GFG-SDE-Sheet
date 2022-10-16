@@ -21,40 +21,37 @@ public class quick_sort
             System.out.print(arr[i] + " ");
         }    
     }    
-    public static void quickSort(int[] arr, int low, int high)
+    
+    static int partition(int[] arr, int low, int high)
     {
-        if(low>=high) 
+        int pivot = arr[high];          // pivot
+        int i = (low - 1);
+  
+        for (int j = low; j <= high - 1; j++) 
         {
-            return;
-        }
-
-        int s = low;
-        int e = high;
-        
-        int pivot = arr[e];
-
-        while(s<=e)
-        {
-            while(arr[s]<pivot)
+            if (arr[j] < pivot)                            // if current element is smaller than pivot
             {
-                s++;
-            }
-            while(arr[e]>pivot)
-            {
-                e--;
-            }
-
-            if(s<=e)
-            {
-                int temp = arr[s];
-                arr[s] = arr[e];
-                arr[e] = temp;
-                s++;
-                e--;
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
+        int temp = arr[i+1];
+        arr[i+1] = arr[high];
+        arr[high] = temp;
+        return (i + 1);
+    }
+  
 
-        quickSort(arr, low, e);
-        quickSort(arr, s, high);
+    static void quickSort(int[] arr, int low, int high)
+    {
+        if (low < high) 
+        {
+            int pi = partition(arr, low, high);          // pi is partitioning index, arr[p] is now at right place
+  
+            quickSort(arr, low, pi - 1);                 // Seperately sort elements before and after partition
+            quickSort(arr, pi + 1, high);
+        }
     }
 }

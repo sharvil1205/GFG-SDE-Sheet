@@ -5,7 +5,7 @@
 
 interface Animal                                 // Interface
 {
-    public void catSound();                      // abstract method;
+    public abstract void catSound();              // abstract method;
 }                                                // Regular methods cannot exist in interfaces.
 
 class Cat implements Animal                      // Use the 'implements' keyword for interface
@@ -33,6 +33,6 @@ Why And When To Use Interfaces?
 
 2) Java does not support "multiple inheritance" (a class can only inherit from one superclass). 
    However, it can be achieved with interfaces, because the class can implement multiple interfaces. 
-   Note: To implement multiple interfaces, separate them with a comma (see example below). 
+   Note: To implement multiple interfaces, separate them with a comma. 
    
 */

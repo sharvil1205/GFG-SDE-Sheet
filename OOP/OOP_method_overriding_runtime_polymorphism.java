@@ -17,6 +17,7 @@ class Child extends Parent {
 	void show()
 	{
 		System.out.println("Child's show()");
+		super.show();                            // will call show() method from parent class
 	}
 }
 

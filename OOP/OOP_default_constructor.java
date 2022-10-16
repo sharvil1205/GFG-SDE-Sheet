@@ -4,10 +4,10 @@
    Types of Constructors in Java
    Primarily there are two types of constructors in java: 
    1. No-argument constructor
-   2. Parameterized Constructor       
+   2. Parameterized Constructor
       
-    1. No-argument constructor: A constructor that has no parameter is known as the default constructor. 
-       If we don’t define a constructor in a class, then the compiler creates a default constructor(with no arguments) for the class. 
+    1. No-argument constructor: A constructor that has no parameter is known as the default constructor.
+       If we don’t define a constructor in a class, then the compiler creates a default constructor(with no arguments) for the class.
        And if we write a constructor with arguments or no arguments then the compiler does not create a default constructor.
    */
 
@@ -19,7 +19,7 @@ public class OOP_default_constructor
     int x;                                         // attribute
     String name;                                   // attribute
 
-    public OOP_default_constructor()                      // Default Constructor (no arguements)
+    public OOP_default_constructor()               // Default Constructor (no arguements)
     {
         System.out.println("Default constructor is called");       
     }
