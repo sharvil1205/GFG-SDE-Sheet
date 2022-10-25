@@ -55,7 +55,6 @@ public class longest_common_prefix
             }
         }
 
-        if(c == 0) return "";
-        else return pre;
+        return pre;
     }
 }
