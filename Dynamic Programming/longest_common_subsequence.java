@@ -28,6 +28,8 @@ Explanation: The longest common subsequence is "ace" and its length is 3. */
         System.out.println("Length of longest common subsequence using recursion: " + recur(s1,s2,0,0));
         System.out.println("Length of longest common subsequence using memoization: " + memo(s1, s2, 0, 0, new int[s1.length()][s2.length()]));
         System.out.println("Length of longest common subsequence using tabulation: " + tabu(s1, s2));
+
+        sc.close();
     }
     
     static int recur(String s1, String s2, int i, int j)

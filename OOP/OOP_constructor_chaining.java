@@ -24,6 +24,7 @@ class Prototype extends Demo
     Prototype(String str1, String str2)  
     {  
         super();                                                             // Step 3: will call default constructor of base class
+        // we can also call parameterized constructor of base class using super(int, int)
         System.out.println("Derived class parameterized constructor called");        // Step 7: will print this
     }  
 }  

@@ -14,6 +14,7 @@ public class dp_fibonacci
         System.out.println("Fibonacci series of term " + n  + " using Memoization: " + memo(n, new int[n+1]));
         System.out.println("Fibonacci series of term " + n  + " using Tabulation: " + tabu(n));
         System.out.println("Fibonacci series of term " + n  + " using Tabulation + Space Optimization: " + tabu_space(n));
+        
         sc.close();
     }
 

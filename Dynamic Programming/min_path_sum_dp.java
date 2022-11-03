@@ -16,26 +16,16 @@ public class min_path_sum_dp
         Output: 7
         Explanation: Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.
          */
-
-         System.out.println("Enter number of rows: ");
-         int row = sc.nextInt();
-         System.out.println("Enter number of columns: ");
-         int col = sc.nextInt();
-
-         int[][] grid = new int[row][col];
-        
-         System.out.println("Enter numbers of " + row + " by " + col + " matrix: ");
-         for(int i=0; i<row; i++)
-         {
-            for(int j=0; j<col; j++)
-            {
-                grid[i][j] = sc.nextInt();
-            }
-         }
+         
+         int[][] grid = {{1,3,1},{1,5,1},{4,2,1}};
+        int row=grid.length;
+        int col = grid[0].length;
 
          System.out.println("Minimum path sum using recursion: "  + recur(grid, row-1, col-1));
          System.out.println("Minimum path sum using memoization: " + memo(grid, row-1, col-1, new int[row][col]));
          System.out.println("Minimum path sum using tabulation: " + tabu(grid, row, col));
+
+         sc.close();
     }
 
     public static int recur(int[][] grid, int row, int col)                                        

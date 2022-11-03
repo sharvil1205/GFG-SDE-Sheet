@@ -30,6 +30,8 @@ public class max_sum_without_adjacent_elements
         System.out.println("Max sum without adjacent elements using memoization: " + memo(a, n-1, new int[n]));
         System.out.println("Max sum without adjacent elements using tabulation: " + tabu(a, n));
         System.out.println("Max sum without adjacent elements using tabulation + space optimization: " + tabu_space(a, n));
+
+        sc.close();
     }    
 
     static int recur(int[] a, int n)                                        // recursion

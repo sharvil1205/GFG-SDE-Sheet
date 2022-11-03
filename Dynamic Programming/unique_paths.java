@@ -24,6 +24,8 @@ public class unique_paths
         System.out.println("Total number of unique paths using recursion: " + recur(m-1, n-1));
         System.out.println("Total number of unique paths using memoization: " + memo(m-1, n-1, new int[m][n]));
         System.out.println("Total number of unique paths using tabulation: " + tabu(m, n));
+
+        sc.close();
     }
     
     public static int recur(int m, int n)

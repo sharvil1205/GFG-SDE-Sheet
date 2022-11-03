@@ -11,6 +11,8 @@ public class longest_common_substring
         String s2 = sc.next();
 
         System.out.println(tabu(s1, s2, s1.length(), s2.length()));
+
+        sc.close();
     }
     
     static int tabu(String s1, String s2, int m, int n)                  // tabulation
