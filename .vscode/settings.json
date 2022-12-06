@@ -3,6 +3,7 @@
         "Strings",
         "Stacks",
         "Sorting Algorithms",
+        "Set",
         "Searching Algorithms",
         "Queues",
         "OOP",
@@ -14,6 +15,6 @@
         "Binary Search Tree",
         "Basic Codes",
         "Arrays",
-        "Set"
+        "Sliding Window"
     ]
 }
