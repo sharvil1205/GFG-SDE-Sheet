@@ -31,20 +31,20 @@ public class dp_fibonacci
         return n2;
     }
 
-    static int recur(int n)                                      // recursion
+    static int recur(int n)                                      // Recursion
     {
         if(n<=1) return n;
         return recur(n-1) + recur(n-2);
     }
 
-    static int memo(int n, int[] qb)                             // memoization
+    static int memo(int n, int[] qb)                             // Memoization
     {
         if(n<2) return n;
         if(qb[n]!=0) return qb[n];
         return qb[n]=memo(n-1,qb)+memo(n-2,qb);
     }
 
-    static int tabu(int n)                                      // tabulation
+    static int tabu(int n)                                      // Tabulation
     {
         if(n<=1) return n;
         int[] dp = new int[n+1];
@@ -57,7 +57,7 @@ public class dp_fibonacci
         return dp[n];
     }
 
-    static int tabu_space(int n)                                      // Tabulation + Space Optimization
+    static int tabu_space(int n)                                // Tabulation + Space Optimization
     {
         if(n<=1) return n;
         int secondLast = 0;
